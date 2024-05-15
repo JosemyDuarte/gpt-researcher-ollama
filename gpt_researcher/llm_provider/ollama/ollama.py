@@ -28,7 +28,7 @@ class OllamaProvider:
             base_url = os.environ["LLM_BASE_URL"]
         except:
             raise Exception(
-                "Ollama base url not found. Please set the OLLAMA_BASE_URL environment variable.")
+                "Ollama base url not found. Please set the LLM_BASE_URL environment variable.")
         return base_url
 
     def get_llm_model(self):
