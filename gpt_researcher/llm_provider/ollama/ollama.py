@@ -19,11 +19,6 @@ class OllamaProvider:
         self.llm = self.get_llm_model()
 
     def get_base_url(self):
-        """
-        Gets the base url
-        Returns:
-
-        """
         try:
             base_url = os.environ["LLM_BASE_URL"]
         except:

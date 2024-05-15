@@ -9,7 +9,7 @@ class Memory:
         match embedding_provider:
             case "ollama":
                 from langchain_community.embeddings import OllamaEmbeddings
-                _embeddings = OllamaEmbeddings(model="llama3:70b-instruct-q4_0")
+                _embeddings = OllamaEmbeddings(model="llama3")
             case "openai":
                 from langchain_openai import OpenAIEmbeddings
                 _embeddings = OpenAIEmbeddings(model="text-embedding-3-small")

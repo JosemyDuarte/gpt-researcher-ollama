@@ -13,7 +13,7 @@ async def main():
     This is a sample script that shows how to run a research report.
     """
     # Query
-    query = "Top 5 news on iOS of the week"
+    query = "Top 5 easiest recipes for a tasty and easy dinner"
     researcher = GPTResearcher(query=query, report_type=ReportType.ResearchReport.value)
     # Conduct research on the given query
     await researcher.conduct_research()
