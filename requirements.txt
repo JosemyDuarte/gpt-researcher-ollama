@@ -20,7 +20,7 @@ requests
 jinja2
 aiofiles
 newspaper3k
-langchain_community
+langchain-community
 SQLAlchemy
 langchain-openai
 mistune

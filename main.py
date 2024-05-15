@@ -1,8 +1,27 @@
-from backend.server import app
+import asyncio
+
 from dotenv import load_dotenv
+from gpt_researcher.utils.enum import ReportType
+
+from gpt_researcher import GPTResearcher
+
 load_dotenv()
 
-if __name__ == "__main__":
-    import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+async def main():
+    """
+    This is a sample script that shows how to run a research report.
+    """
+    # Query
+    query = "Top 5 news on Android of the week"
+    researcher = GPTResearcher(query=query, report_type=ReportType.ResearchReport.value)
+    # Conduct research on the given query
+    await researcher.conduct_research()
+    # Write the report
+    report = await researcher.write_report()
+
+    return report
+
+
+if __name__ == "__main__":
+    print(asyncio.run(main()))
